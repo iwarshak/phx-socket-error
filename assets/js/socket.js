@@ -17,7 +17,7 @@ socket.connect()
 // Now that you are connected, you can join channels with a topic:
 let channel = socket.channel("main", {})
 channel.onClose(() => console.log("channel onClose"))
-channel.onError((e) => console.log("channel onError", e))
+channel.onError(() => console.log("channel onError"))
 channel.join()
   .receive("ok", resp => { console.log("channel joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })

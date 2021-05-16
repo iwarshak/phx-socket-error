@@ -2,7 +2,7 @@ defmodule SocketErrorWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", SocketErrorWeb.RoomChannel
+  channel "main", SocketErrorWeb.MainChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
